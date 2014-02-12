@@ -19,8 +19,8 @@
 }
 
 *:hover {
-	transition: opacity 1s, color 1s;
-	-webkit-transition: opacity 1s, color 1s; /* Darn you, Safari... */
+	transition: opacity .6s, color .6s;
+	-webkit-transition: opacity .6s, color .6s; /* Darn you, Safari... */
 }
 
 body {
@@ -156,6 +156,10 @@ a:hover {
 	background: url("images/title-2.png") no-repeat;
 	text-align: right;
 	float: right;
+}
+
+#projects #title-3 {
+	background: url("images/title-3.png") no-repeat;
 }
 
 #projects .project {
