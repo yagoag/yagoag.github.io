@@ -162,6 +162,12 @@ a:hover {
 	background: url("images/title-3.png") no-repeat;
 }
 
+#projects #title-4 {
+    background: url("images/title-4.png") no-repeat;
+    text-align: right;
+	float: right;
+}
+
 #projects .project {
 	box-shadow: 0 0 3px rgba(0, 0, 0, .5);
 	background: rgba(255, 255, 255, .2);
