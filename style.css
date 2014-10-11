@@ -27,7 +27,7 @@ body {
 	text-align: center;
 	font-family: "Planer", Arial, sans-serif;
 	font-size: 16px;
-	background: url("images/bg.jpg");
+	background: url("images/bg.png");
 }
 
 a {
@@ -105,6 +105,12 @@ a:hover {
 	height: 115px;
 }
 
+#links #linkedin-link {
+	background: url("images/linkedin-link-bg.png") no-repeat;
+	width: 116px;
+	height: 115px;
+}
+
 #hat-guy {
 	background: url("images/hat-guy.png") no-repeat;
 	width: 216px;
@@ -128,6 +134,17 @@ a:hover {
 	font-size: 58px;
 	height: 50px;
 	margin-right: 10px;
+}
+
+#subabout {
+	background: url("images/subabout-bg.png") no-repeat;
+	width: 800px;
+	height: 86px;
+	font-size: 20px;
+	color: #000;
+	text-shadow: -1px -1px 0 rgba(0, 0, 0, .3), 1px 1px 0 rgba(255, 255, 255, .5);
+	padding: 40px 40px 0 40px;
+    margin-left: 13px;
 }
 
 #projects {
@@ -178,6 +195,7 @@ a:hover {
 
 #projects .a {
 	margin-left: 25px;
+    border-radius: 0 10px;
 }
 
 #projects .a img {
@@ -187,6 +205,7 @@ a:hover {
 
 #projects .b {
 	margin-left: 18px;
+    border-radius: 10px 0;
 }
 
 #projects .b img {
