@@ -1,0 +1,119 @@
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0 0 0 5px;
+  padding: 0;
+  list-style: none;
+}
+
+ul li:before {
+  content: "- ";
+  font-size: 12px;
+}
+
+@font-face {
+  font-family: "Charis SIL";
+  src: url("../fonts/CharisSILR.ttf");
+}
+
+body {
+  font-family: "Charis SIL", serif;
+  color: #393e41;
+  background-color: #F6F7EB;
+  padding: 15px 0;
+  font-size: 14px;
+}
+
+h1 {
+  color: #559cad;
+  font-size: 24px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #393e41;
+}
+
+a {
+  color: #559cad;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 1px solid #e94f37;
+  text-decoration: none;
+  color: #e94f37;
+}
+
+a:active {
+  color: #9e2b25;
+  text-decoration: none;
+  border-bottom: 1px solid #9e2b25;
+}
+
+.btn-group {
+  margin-left: calc(100% - 120px);
+}
+
+.btn-language {
+  background-color: #559cad;
+}
+
+ul.dropdown-menu li:before {
+  content: "";
+}
+
+ul.dropdown-menu li {
+  margin-left: 10px;
+}
+
+ul.dropdown-menu {
+  font-size: 14px;
+}
+
+ul.dropdown-menu a {
+  border: none;
+}
+
+.sidebar {
+  text-align: right;
+}
+
+.name {
+  font-size: 24px;
+}
+
+.description {
+  text-align: justify;
+}
+
+.description p {
+  padding-bottom: 7px;
+}
+
+.skills {
+  font-size: 18px;
+}
+
+.skill {
+  background-color: #e94f37;
+  font-weight: 400;
+}
+
+.job-title {
+  color: #9e2b25;
+  font-size: 16px;
+}
+
+.company {
+  color: #e94f37;
+}
+
+.date {
+  color: #878787;
+}
+
+.proj-title {
+  font-size: 16px;
+  color: #9e2b25;
+}
