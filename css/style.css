@@ -75,10 +75,6 @@ ul.dropdown-menu a {
   border: none;
 }
 
-.sidebar {
-  text-align: right;
-}
-
 .name {
   font-size: 24px;
 }
@@ -92,7 +88,7 @@ ul.dropdown-menu a {
 }
 
 .skills {
-  font-size: 18px;
+  font-size: 1.3em;
 }
 
 .skill {
