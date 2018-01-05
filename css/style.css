@@ -107,6 +107,10 @@ ul.dropdown-menu a {
   padding-top: 2px;
 }
 
+.skills .row {
+  margin-left: 5px;
+}
+
 .skill {
   background-color: #e94f37;
   font-weight: 400;
