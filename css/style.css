@@ -34,6 +34,13 @@ h1 {
   border-bottom: 1px solid #393e41;
 }
 
+h3 {
+  color: #559cad;
+  font-size: 18px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #393e41;
+}
+
 a {
   color: #559cad;
   text-decoration: none;
@@ -87,13 +94,45 @@ ul.dropdown-menu a {
   padding-bottom: 7px;
 }
 
-.skills {
+.skill-tags {
   font-size: 1.3em;
+}
+
+.skills .col-xs-5,
+.skills .col-xs-7 {
+  padding: 0;
+}
+
+.skills .col-xs-7 {
+  padding-top: 2px;
 }
 
 .skill {
   background-color: #e94f37;
   font-weight: 400;
+}
+
+.skill-point {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.skill-point.true {
+  background: #e94f37;
+}
+
+.skill-point.false {
+  background: #878787;
+}
+
+.skill-point.half {
+  background: #e94f37;
+  background: -moz-linear-gradient(left,  #e94f37 50%, #878787 51%);
+  background: -webkit-linear-gradient(left,  #e94f37 50%, #878787 51%);
+  background: linear-gradient(to right,  #e94f37 50%, #878787 51%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e94f37', endColorstr='#878787',GradientType=1 );
 }
 
 .job-title {
