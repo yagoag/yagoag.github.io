@@ -1,14 +1,18 @@
+$white: #ededed;
+$lightgray: #a5a5a5;
+$black: #212121;
+
 * {
   padding: 0;
   margin: 0;
 }
 
 body {
-  background-color: #212121;
+  background-color: $black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: Arial, Helvetica, sans-serif;
-  color: #ededed;
+  color: $white;
   font-size: 16px;
 }
 
@@ -38,13 +42,23 @@ section {
     margin: 0 auto;
     margin-bottom: 24px;
     text-align: center;
+    animation: blink 4s alternate infinite;
 
     .arrow {
       width: 0px;
       height: 0px;
       border: 6px solid transparent;
-      border-top-color: white;
+      border-top-color: $white;
       margin: 0 auto;
+    }
+
+    @keyframes blink {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0.6;
+      }
     }
   }
 }
@@ -67,7 +81,7 @@ section {
     margin-left: 16px;
     margin-bottom: -20px;
     transform: rotate(-1.5deg);
-    text-shadow: #a5a5a5 2px 2px 2px;
+    text-shadow: $lightgray 2px 2px 2px;
   }
 
   .description-container {
