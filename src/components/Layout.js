@@ -155,7 +155,9 @@ const Layout = ({ location, children }) => {
               <PageLink active={location.pathname === rootPath}>Home</PageLink>
             </Link>
             <Link to={`${rootPath}blog`}>
-              <PageLink active={location.pathname !== rootPath}>Blog</PageLink>
+              <PageLink active={location.pathname.includes('/blog')}>
+                Blog
+              </PageLink>
             </Link>
           </ul>
         </Header>
