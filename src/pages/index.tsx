@@ -1,12 +1,13 @@
 import React from 'react';
 import { PageProps, graphql } from 'gatsby';
-import styled from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import HiIllustrationDark from '../../content/assets/HiIllustrationDark';
 import GitHubIcon from '../../content/assets/GitHubIcon';
 import LinkedInIcon from '../../content/assets/LinkedInIcon';
 import TwitterIcon from '../../content/assets/TwitterIcon';
+import { DARK_THEME } from '../components/Layout/darkTheme';
 
 type Data = {
   site: {
@@ -42,7 +43,7 @@ const Presentation = styled.div`
     font-weight: 600;
     letter-spacing: 0.05rem;
     line-height: 1.25;
-    color: #fffffe;
+    color: ${({ theme }) => theme.colors.fg.base};
     margin-top: 3rem;
   }
 
@@ -52,12 +53,16 @@ const Presentation = styled.div`
 `;
 
 const Accent = styled.span`
-  color: #7f5af0;
-  text-shadow: -1px 0 0 #fffffe, 0 -1px 0 #fffffe, 1px 0 0 #fffffe,
-    0 1px 0 #fffffe;
+  color: ${({ theme }) => theme.colors.primary.base};
+  text-shadow: ${({ theme }) =>
+    theme.name === DARK_THEME &&
+    `-1px 0 0 ${theme.colors.fg.base},
+    0 -1px 0 ${theme.colors.fg.base},
+    1px 0 0 ${theme.colors.fg.base},
+    0 1px 0 ${theme.colors.fg.base}`};
 `;
 
-const SocialLinks = styled.div`
+const SocialLinkContainer = styled.div`
   > a {
     transition: opacity 400ms;
 
@@ -66,10 +71,16 @@ const SocialLinks = styled.div`
     }
 
     &:hover {
-      opacity: 0.7;
+      opacity: 0.5;
     }
   }
 `;
+
+const SocialLink = withTheme(({ link, icon: Icon, theme }) => (
+  <a href={link}>
+    <Icon fill={theme.colors.fg.base} width={24} />
+  </a>
+));
 
 const Index = ({ data, location }: PageProps<Data>) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -87,17 +98,14 @@ const Index = ({ data, location }: PageProps<Data>) => {
           <p>
             Hi, I am Yago and I <Accent>love</Accent> front-end development
           </p>
-          <SocialLinks>
-            <a href="https://github.com/yagoag">
-              <GitHubIcon fill="#fffffe" width={24} />
-            </a>
-            <a href="https://www.linkedin.com/in/yagoag/">
-              <LinkedInIcon fill="#fffffe" width={24} />
-            </a>
-            <a href="https://twitter.com/yagoag`">
-              <TwitterIcon fill="#fffffe" width={24} />
-            </a>
-          </SocialLinks>
+          <SocialLinkContainer>
+            <SocialLink link="https://github.com/yagoag" icon={GitHubIcon} />
+            <SocialLink
+              link="https://www.linkedin.com/in/yagoag/"
+              icon={LinkedInIcon}
+            />
+            <SocialLink link="https://twitter.com/yagoag" icon={TwitterIcon} />
+          </SocialLinkContainer>
         </div>
       </Presentation>
     </Layout>
